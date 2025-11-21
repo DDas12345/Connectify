@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debanshika Das | Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Connectify</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="network.html">Network</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Pokémon -->
+    <section class="hero">
+        <div class="container">
+            <h2>Fill Your Pokémon Profile</h2>
+            <p>Share your skills, experience, and Pokémon expertise with the world!</p>
+        </div>
+        <img src="images.png" class="pokemon pikachu" alt="Pikachu">
+        <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png" class="pokemon eevee" alt="Eevee">
+        <div class="sparkle sparkle1"></div>
+        <div class="sparkle sparkle2"></div>
+        <div class="sparkle sparkle3"></div>
+        <div class="sparkle sparkle4"></div>
+        <div class="sparkle sparkle5"></div>
+    </section>
+
+    <!-- Profile Form Section -->
+    <section class="profile-form container">
+        <h2>Fill Your Profile</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <!-- Personal Info -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Debanshika Das" required>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Professional Title</label>
+                <input type="text" id="title" name="title" placeholder="Front-End Developer | UI/UX Designer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Profile Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+
+            <!-- About Me -->
+            <div class="form-group">
+                <label for="about">About Me</label>
+                <textarea id="about" name="about" placeholder="Write a brief description about yourself..." rows="4" required></textarea>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+                <label for="skills">Skills (comma-separated)</label>
+                <input type="text" id="skills" name="skills" placeholder="HTML, CSS, JavaScript, React, UI/UX Design">
+            </div>
+
+            <!-- Experience -->
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <textarea id="experience" name="experience" placeholder="Describe your work experience..." rows="4"></textarea>
+            </div>
+
+            <!-- Education -->
+            <div class="form-group">
+                <label for="education">Education</label>
+                <input type="text" id="education" name="education" placeholder="Bachelor of Computer Science, Pokémon University">
+            </div>
+
+            <button type="submit" class="submit-btn">Save Profile</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Connectify. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

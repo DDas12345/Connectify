@@ -1,0 +1,337 @@
+/* General Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F0F8FF;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #1A75FF, #0044AA);
+    color: #FFD700;
+    padding: 20px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #FF0000;
+}
+
+header .logo {
+    font-size: 32px;
+    font-weight: 700;
+    display: inline-block;
+    color: #FFDE00;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px 20px;
+    background: linear-gradient(180deg, #C0E0FF 0%, #E0F0FF 100%);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #FFD700;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #FFD700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #1A1A1A;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.hero .btn:hover {
+    background-color: #FF5555;
+    transform: scale(1.05);
+}
+
+/* Floating Pokémon icons */
+.pokemon {
+    position: absolute;
+    width: 80px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.pikachu {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.eevee {
+    top: 20px;
+    right: 20px;
+    animation-delay: 0s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 10px #FFD700;
+    animation: twinkle 2s infinite;
+}
+
+.sparkle1 { top: 30px; left: 50%; }
+.sparkle2 { top: 80px; left: 70%; animation-delay: 0.5s; }
+sparkle3 { top: 150px; left: 30%; animation-delay: 1s; }
+.sparkle4 { top: 200px; left: 60%; animation-delay: 1.5s; }
+.sparkle5 { top: 100px; left: 40%; animation-delay: 2s; }
+
+@keyframes twinkle {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 0.3; }
+}
+
+/* SECTION BASE STYLE */
+section {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color: #E0F0FF;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-size: 32px;
+    color: #1A75FF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* LIST BLOCKS */
+section ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+section ul li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* VIDEO SECTION */
+.video-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.video-section h2 {
+    font-size: 30px;
+    color: #1A75FF;
+    margin-bottom: 25px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.video-grid video {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-grid video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* GALLERY SECTION */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* PAGE LAYOUT (3-column grid like LinkedIn) */
+.page-layout {
+    display: grid;
+    grid-template-columns: 22% 50% 28%;
+    gap: 20px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+}
+
+/* LEFT & RIGHT SIDE BARS */
+.left-sidebar,
+.right-sidebar {
+    position: sticky;
+    top: 90px;
+    height: max-content;
+}
+
+.sidebar-box {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-box h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1A75FF;
+}
+
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-box ul li {
+    background: #F0F8FF;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.sidebar-box ul li:hover {
+    transform: translateY(-3px);
+}
+
+/* MAIN FEED */
+.main-feed section {
+    margin-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #1A75FF, #0044AA);
+    color: #FFD700;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+    border-top: 4px solid #FF0000;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        position: relative;
+        top: 0;
+    }
+}
