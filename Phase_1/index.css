@@ -133,7 +133,6 @@ header nav ul li a:hover {
     100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* Sparkles */
 .sparkle {
     position: absolute;
     width: 8px;
@@ -334,4 +333,15 @@ footer {
         position: relative;
         top: 0;
     }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
