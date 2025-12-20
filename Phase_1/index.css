@@ -23,7 +23,7 @@ header {
     background: linear-gradient(90deg, #1A75FF, #0044AA);
     color: #FFD700;
     padding: 20px 0;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,7 +35,7 @@ header .logo {
     font-weight: 700;
     display: inline-block;
     color: #FFDE00;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 header nav {
@@ -78,7 +78,7 @@ header nav ul li a:hover {
 .hero h2 {
     font-size: 36px;
     color: #FFD700;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 15px;
 }
 
@@ -98,7 +98,7 @@ header nav ul li a:hover {
     font-weight: 600;
     border-radius: 50px;
     transition: 0.3s;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero .btn:hover {
@@ -128,9 +128,17 @@ header nav ul li a:hover {
 }
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(10deg); }
-    100% { transform: translateY(0) rotate(0deg); }
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 .sparkle {
@@ -144,15 +152,47 @@ header nav ul li a:hover {
     animation: twinkle 2s infinite;
 }
 
-.sparkle1 { top: 30px; left: 50%; }
-.sparkle2 { top: 80px; left: 70%; animation-delay: 0.5s; }
-.sparkle3 { top: 150px; left: 30%; animation-delay: 1s; }
-.sparkle4 { top: 200px; left: 60%; animation-delay: 1.5s; }
-.sparkle5 { top: 100px; left: 40%; animation-delay: 2s; }
+.sparkle1 {
+    top: 30px;
+    left: 50%;
+}
+
+.sparkle2 {
+    top: 80px;
+    left: 70%;
+    animation-delay: 0.5s;
+}
+
+.sparkle3 {
+    top: 150px;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.sparkle4 {
+    top: 200px;
+    left: 60%;
+    animation-delay: 1.5s;
+}
+
+.sparkle5 {
+    top: 100px;
+    left: 40%;
+    animation-delay: 2s;
+}
 
 @keyframes twinkle {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.5); opacity: 0.3; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.3;
+    }
 }
 
 /* SECTION BASE STYLE */
@@ -161,7 +201,7 @@ section {
     margin-bottom: 40px;
     border-radius: 15px;
     background-color: #E0F0FF;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
@@ -191,7 +231,7 @@ section ul li {
     margin: 10px 0;
     padding: 15px 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -200,7 +240,7 @@ section ul li {
 
 section ul li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* VIDEO SECTION */
@@ -226,13 +266,13 @@ section ul li:hover {
     width: 100%;
     max-width: 350px;
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .video-grid video:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* GALLERY SECTION */
@@ -247,7 +287,7 @@ section ul li:hover {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s;
 }
 
@@ -278,7 +318,7 @@ section ul li:hover {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-box h2 {
@@ -298,7 +338,7 @@ section ul li:hover {
     border-radius: 10px;
     margin-bottom: 10px;
     font-size: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
 
@@ -319,7 +359,7 @@ footer {
     padding: 30px 0;
     font-size: 16px;
     border-top: 4px solid #FF0000;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* RESPONSIVE */
