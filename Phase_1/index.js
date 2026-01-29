@@ -55,3 +55,23 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 allSections.forEach(section => observer.observe(section));
+
+/* 6️⃣ Mobile Menu Toggle */
+const menuIcon = document.getElementById("menu-icon");
+const navMenu = document.getElementById("nav-menu");
+
+if (menuIcon && navMenu) {
+    menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        // Change icon between bars and times
+        const icon = menuIcon.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+    });
+}
+

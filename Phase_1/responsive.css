@@ -1,0 +1,163 @@
+/* Responsive Design for Connectify */
+
+/* Tablet & Smaller Screens */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Page Layout Adjustments */
+    .page-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    /* Hero Section Adjustments */
+    .hero {
+        padding: 80px 15px 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Video & Gallery Grids */
+    .video-grid,
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Profile Card Grid */
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+
+    /* Header Responsive */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .menu-icon {
+        display: block !important;
+        /* Show hamburger */
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #1A75FF, #0044AA);
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        border-bottom: 3px solid #FF0000;
+        z-index: 1000;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        display: block;
+        padding: 20px 0;
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+
+    /* Hero Section Pokémon positions */
+    .pokemon {
+        width: 60px;
+    }
+
+    .pikachu {
+        top: 10px;
+        left: 10px;
+    }
+
+    .eevee {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Sections Padding */
+    section {
+        padding: 40px 15px;
+        margin-bottom: 25px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    /* Form Adjustments */
+    .profile-form-section,
+    .profile-form.container {
+        padding: 20px;
+    }
+
+    /* Job Card Adjustments */
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-card h3 {
+        font-size: 18px;
+    }
+
+    /* Profile Cards */
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+    header .logo {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Hide floating icons on very small screens to avoid clutter */
+    .pokemon,
+    .sparkle {
+        display: none;
+    }
+}

@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Connectify</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container header-container">
             <h1 class="logo">Connectify</h1>
-            <nav>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="network.html">Network</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="Jobs.html">Jobs</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                 </ul>
             </nav>
@@ -43,7 +50,9 @@
     <!-- About Content Section -->
     <section class="about-content container">
         <h2>Our Mission</h2>
-        <p>Connectify is dedicated to bringing together Pokémon trainers, researchers, and enthusiasts from all regions of the Pokémon world. Our platform helps you showcase your skills, find opportunities, and network with other trainers and professionals.</p>
+        <p>Connectify is dedicated to bringing together Pokémon trainers, researchers, and enthusiasts from all regions
+            of the Pokémon world. Our platform helps you showcase your skills, find opportunities, and network with
+            other trainers and professionals.</p>
 
         <h2>What We Offer</h2>
         <ul>
@@ -54,7 +63,8 @@
         </ul>
 
         <h2>Join the Community</h2>
-        <p>Whether you are just starting your Pokémon journey or are a seasoned trainer, Connectify welcomes you. Our goal is to help you grow, learn, and discover new opportunities in the world of Pokémon!</p>
+        <p>Whether you are just starting your Pokémon journey or are a seasoned trainer, Connectify welcomes you. Our
+            goal is to help you grow, learn, and discover new opportunities in the world of Pokémon!</p>
     </section>
 
     <!-- Footer -->
@@ -62,5 +72,7 @@
         <p>&copy; 2025 Connectify. All rights reserved.</p>
     </footer>
 
+    <script src="index.js"></script>
 </body>
+
 </html>
