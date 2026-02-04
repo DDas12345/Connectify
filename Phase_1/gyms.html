@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéLink - Gym Challenges</title>
+    <link rel="stylesheet" href="gyms.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">
+                <div class="pokeball-logo"></div>
+                PokéLink
+            </h1>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="network.html">Network</a></li>
+                    <li><a href="gyms.html" class="active">Gyms</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gym Hero Section -->
+    <section class="hero gym-hero">
+        <div class="container">
+            <h2>Gym Challenge Circuit</h2>
+            <p>Track elite Gym Leaders, verify their challenge availability, and navigate to the nearest battle arena.
+            </p>
+        </div>
+        <img src="images.png" class="pokemon pikachu" alt="Pikachu">
+        <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png" class="pokemon eevee" alt="Eevee">
+        <div class="sparkle sparkle1"></div>
+        <div class="sparkle sparkle2"></div>
+        <div class="sparkle sparkle3"></div>
+        <div class="sparkle sparkle4"></div>
+        <div class="sparkle sparkle5"></div>
+    </section>
+
+    <!-- Gym List Section -->
+    <div class="gym-container container">
+        <h2 class="section-title">Active Gym Leaders</h2>
+
+        <!-- Gym Card 1 -->
+        <div class="gym-card">
+            <div class="gym-info">
+                <div class="badge-icon water">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="details">
+                    <div class="header-row">
+                        <h3>Misty</h3>
+                        <span class="status available">Available for Challenge</span>
+                    </div>
+                    <p class="specialty">Type: <strong>Water</strong></p>
+                    <p class="description">"The Tomboyish Mermaid." Expect high-speed aquatic maneuvers and strategic
+                        field-play.</p>
+                </div>
+            </div>
+            <div class="gym-map">
+                <div class="map-placeholder">
+                    <div class="map-ui">
+                        <div class="coordinate">LAT: 34.05 / LONG: -118.24</div>
+                        <div class="location-label">Cerulean City Gym</div>
+                        <div class="scan-line"></div>
+                        <div class="map-pings">
+                            <div class="ping"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn"><i class="fas fa-location-arrow"></i> Navigate to Gym</button>
+            </div>
+        </div>
+
+        <!-- Gym Card 2 -->
+        <div class="gym-card">
+            <div class="gym-info">
+                <div class="badge-icon rock">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <div class="details">
+                    <div class="header-row">
+                        <h3>Brock</h3>
+                        <span class="status busy">Busy Training</span>
+                    </div>
+                    <p class="specialty">Type: <strong>Rock</strong></p>
+                    <p class="description">"The Rock-Solid Pokémon Trainer." Challenges focus on endurance and defensive
+                        capabilities.</p>
+                </div>
+            </div>
+            <div class="gym-map">
+                <div class="map-placeholder rock-map">
+                    <div class="map-ui">
+                        <div class="coordinate">LAT: 36.16 / LONG: -115.13</div>
+                        <div class="location-label">Pewter City Gym</div>
+                        <div class="scan-line"></div>
+                        <div class="map-pings">
+                            <div class="ping"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn disabled" disabled><i class="fas fa-clock"></i> Check Back Later</button>
+            </div>
+        </div>
+
+        <!-- Gym Card 3 -->
+        <div class="gym-card">
+            <div class="gym-info">
+                <div class="badge-icon electric">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="details">
+                    <div class="header-row">
+                        <h3>Lt. Surge</h3>
+                        <span class="status available">Available for Challenge</span>
+                    </div>
+                    <p class="specialty">Type: <strong>Electric</strong></p>
+                    <p class="description">"The Lightning American." High-voltage tactics and military-precision team
+                        coordination.</p>
+                </div>
+            </div>
+            <div class="gym-map">
+                <div class="map-placeholder electric-map">
+                    <div class="map-ui">
+                        <div class="coordinate">LAT: 40.71 / LONG: -74.00</div>
+                        <div class="location-label">Vermilion City Gym</div>
+                        <div class="scan-line"></div>
+                        <div class="map-pings">
+                            <div class="ping"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn"><i class="fas fa-location-arrow"></i> Navigate to Gym</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PokéLink. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

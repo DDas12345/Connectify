@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connectify - Professional Pokémon Networking</title>
+    <title>PokéLink - Professional Pokémon Networking</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,7 +16,10 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <h1 class="logo">Connectify</h1>
+            <h1 class="logo">
+                <div class="pokeball-logo"></div>
+                PokéLink
+            </h1>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
@@ -25,7 +28,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="network.html">Network</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="gyms.html">Gyms</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
@@ -37,7 +40,7 @@
         <div class="container">
             <h2>Connect, Train, and Grow Your Career</h2>
             <p>“Every connection is a step toward mastery—build your professional Pokédex one network at a time.” —
-                Connectify</p>
+                PokéLink</p>
             <a href="profile.html" class="btn">Get Started</a>
         </div>
         <img src="images.png" class="pokemon pikachu" alt="Pikachu">
@@ -54,13 +57,23 @@
 
         <!-- LEFT SIDEBAR -->
         <aside class="left-sidebar">
-            <section class="sidebar-box">
-                <h2>Saved Items</h2>
-                <ul>
-                    <li>📌 “Top 10 PokéAI Projects for 2025”</li>
-                    <li>📌 “Networking Tips for Young Trainers”</li>
-                    <li>📌 “Upcoming Pokémon Developer Conferences”</li>
-                </ul>
+
+            <!-- Trainer Snapshot -->
+            <section class="sidebar-box trainer-snapshot">
+                <div class="snapshot-header"></div>
+                <div class="snapshot-content">
+                    <img src="https://i.pinimg.com/736x/fa/71/70/fa717003033a844eb6aa4970fc2acbcd.jpg"
+                        class="snapshot-avatar" alt="User">
+                    <h3>Debanshika Das</h3>
+                    <p>Ace Trainer | Full-Stack Dev</p>
+                    <div class="snapshot-stats">
+                        <div class="s-stat"><span>Views</span><strong>142</strong></div>
+                        <div class="s-stat"><span>Connections</span><strong>520</strong></div>
+                    </div>
+                </div>
+                <div class="snapshot-footer">
+                    <a href="profile.html">My Trainer Card <i class="fas fa-arrow-right"></i></a>
+                </div>
             </section>
 
             <section class="sidebar-box">
@@ -91,50 +104,99 @@
             </section>
         </aside>
 
-        <!-- MAIN CONTENT -->
+        <!-- MAIN CONTENT: TRAINER FEED -->
         <main class="main-feed">
 
-            <!-- About -->
-            <section class="about">
-                <h2>About Connectify</h2>
-                <p>Connectify is a student-focused professional networking platform inspired by the Pokémon universe.
-                    Build your profile, engage with fellow trainers, explore new opportunities, and elevate your skills
-                    to the next level.</p>
-            </section>
-
-            <!-- Video Section -->
-            <section class="video-section">
-                <h2>See Connectify in Action</h2>
-                <div class="video-grid">
-                    <video controls poster="images/video-poster1.png">
-                        <source src="videos/connectify-demo1.mp4" type="video/mp4">
-                    </video>
-
-                    <video controls poster="images/video-poster2.png">
-                        <source src="videos/connectify-demo2.mp4" type="video/mp4">
-                    </video>
-
-                    <video controls poster="images/video-poster3.png">
-                        <source src="videos/connectify-demo3.mp4" type="video/mp4">
-                    </video>
-
-                    <video controls poster="images/video-poster4.png">
-                        <source src="videos/connectify-demo4.mp4" type="video/mp4">
-                    </video>
+            <!-- Post Creator Box -->
+            <div class="post-creator">
+                <div class="creator-top">
+                    <img src="https://i.pinimg.com/736x/fa/71/70/fa717003033a844eb6aa4970fc2acbcd.jpg"
+                        class="user-avatar" alt="User">
+                    <button class="create-post-btn">Share your journey, Trainer...</button>
                 </div>
-            </section>
-
-            <!-- Gallery -->
-            <section class="gallery">
-                <h2>Our Trainers in Action</h2>
-                <div class="image-grid">
-                    <img src="Gemini_Generated_Image_8j6cm88j6cm88j6c.png" alt="Trainer 1">
-                    <img src="Gemini_Generated_Image_gr08ecgr08ecgr08.png" alt="Trainer 2">
-                    <img src="Gemini_Generated_Image_ka2hhska2hhska2h.png" alt="Trainer 3">
-                    <img src="Gemini_Generated_Image_x78jxtx78jxtx78j.png" alt="Trainer 4">
+                <div class="creator-bottom">
+                    <div class="action"><i class="fas fa-camera"></i> Photo</div>
+                    <div class="action"><i class="fas fa-video"></i> Video</div>
+                    <div class="action"><i class="fas fa-calendar-alt"></i> Event</div>
+                    <div class="action"><i class="fas fa-newspaper"></i> Write Article</div>
                 </div>
-            </section>
+            </div>
 
+            <!-- Feed Posts -->
+            <div class="feed-posts">
+
+                <!-- Post 1: Blue -->
+                <article class="feed-post">
+                    <div class="post-header">
+                        <img src="https://pbs.twimg.com/media/EjqV_B0X0AAv_M_.jpg" class="post-avatar" alt="Blue">
+                        <div class="post-meta">
+                            <h4>Blue Oak <span class="badge"><i class="fas fa-certificate"></i> Verified</span></h4>
+                            <p>Former Champion | Pallet Town</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h more"></i>
+                    </div>
+                    <div class="post-content">
+                        <p>Just finished a rigorous training session at Mt. Silver. The weather was harsh, but my
+                            Blastoise has never been stronger. Smell ya later, beginners! 💨</p>
+                        <img src="https://images.unsplash.com/photo-1613771404721-1f92d799e49f?q=80&w=2069&auto=format&fit=crop"
+                            class="post-img" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <span><i class="far fa-heart"></i> 1.2k Likes</span>
+                        <span><i class="far fa-comment"></i> 45 Comments</span>
+                        <span><i class="fas fa-share-alt"></i> Share</span>
+                    </div>
+                </article>
+
+                <!-- Post 2: Professor Oak -->
+                <article class="feed-post">
+                    <div class="post-header">
+                        <img src="https://archives.bulbagarden.net/media/upload/thumb/3/30/Samuel_Oak_Masters.png/250px-Samuel_Oak_Masters.png"
+                            class="post-avatar" alt="Oak">
+                        <div class="post-meta">
+                            <h4>Professor Oak</h4>
+                            <p>Head Researcher | Oak Labs</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h more"></i>
+                    </div>
+                    <div class="post-content">
+                        <p>Incredible breakthrough! We've discovered a new behavioral pattern in local Oddish
+                            populations during the midnight sun. Science is truly marvelous! 🧬✨</p>
+                    </div>
+                    <div class="post-actions">
+                        <span><i class="far fa-heart"></i> 890 Likes</span>
+                        <span><i class="far fa-comment"></i> 12 Comments</span>
+                        <span><i class="fas fa-share-alt"></i> Share</span>
+                    </div>
+                </article>
+
+                <!-- Post 3: Cynthia -->
+                <article class="feed-post">
+                    <div class="post-header">
+                        <img src="https://i.pinimg.com/736x/87/40/3e/87403e06385cf355877f9cdce5577661.jpg"
+                            class="post-avatar" alt="Cynthia">
+                        <div class="post-meta">
+                            <h4>Cynthia <span class="badge"><i class="fas fa-crown"></i> Champion</span></h4>
+                            <p>Sinnoh League Champion | Myths & Legends</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h more"></i>
+                    </div>
+                    <div class="post-content">
+                        <p>Studying the ancient murals at Celestic Town today. The bond between humans and Pokémon
+                            transcends time itself. Always curious, always learning. 📖🌒</p>
+                        <div class="video-placeholder">
+                            <i class="fas fa-play"></i>
+                            <p>Watch Battle Recording</p>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <span><i class="far fa-heart"></i> 5.6k Likes</span>
+                        <span><i class="far fa-comment"></i> 230 Comments</span>
+                        <span><i class="fas fa-share-alt"></i> Share</span>
+                    </div>
+                </article>
+
+            </div>
         </main>
 
         <!-- RIGHT SIDEBAR -->
@@ -160,7 +222,7 @@
             <section class="sidebar-box">
                 <h2>Latest Updates</h2>
                 <ul>
-                    <li>🌟 Connectify now supports PokéProjects</li>
+                    <li>🌟 PokéLink now supports PokéProjects</li>
                     <li>📢 New mentorship program launched</li>
                     <li>🆕 Trainer Spotlight: Elite Members</li>
                 </ul>
@@ -171,8 +233,27 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Connectify. All rights reserved.</p>
+        <p>&copy; 2025 PokéLink. All rights reserved.</p>
     </footer>
+
+    <!-- Onboarding Tutorial -->
+    <div id="onboarding-overlay" class="onboarding-overlay">
+        <div class="onboarding-content">
+            <div class="character-container">
+                <img src="images.png" class="guide-character pikachu-guide" alt="Pikachu Guide">
+                <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png"
+                    class="guide-character eevee-guide" alt="Eevee Guide">
+            </div>
+            <div class="speech-bubble">
+                <p id="onboarding-text">Welcome to PokéLink, Trainer! I'm Pikachu, and this is Eevee. We're here to help
+                    you get started!</p>
+                <div class="onboarding-actions">
+                    <button id="onboarding-skip" class="btn-skip">Skip</button>
+                    <button id="onboarding-next" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 

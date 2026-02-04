@@ -1,4 +1,4 @@
-/* Responsive Design for Connectify */
+/* Responsive Design for PokéLink */
 
 /* Tablet & Smaller Screens */
 @media screen and (max-width: 992px) {
@@ -37,10 +37,15 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    /* Profile Card Grid */
-    .card-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 15px;
+    /* Profile Page Grid */
+    .profile-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-card-preview {
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -94,17 +99,22 @@
 
     /* Hero Section Pokémon positions */
     .pokemon {
-        width: 60px;
+        width: 70px;
     }
 
     .pikachu {
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        left: 20px;
     }
 
     .eevee {
-        top: 10px;
-        right: 10px;
+        top: 30px;
+        right: 20px;
+    }
+
+    /* Form row vertical on mobile */
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
     /* Sections Padding */
@@ -155,8 +165,21 @@
         font-size: 14px;
     }
 
-    /* Hide floating icons on very small screens to avoid clutter */
-    .pokemon,
+    /* Keep icons but make them smaller on very small devices */
+    .pokemon {
+        width: 50px;
+    }
+
+    .pikachu {
+        top: 15px;
+        left: 15px;
+    }
+
+    .eevee {
+        top: 20px;
+        right: 15px;
+    }
+
     .sparkle {
         display: none;
     }

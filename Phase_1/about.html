@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Connectify</title>
+    <title>About PokéLink</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,7 +16,10 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <h1 class="logo">Connectify</h1>
+            <h1 class="logo">
+                <div class="pokeball-logo"></div>
+                PokéLink
+            </h1>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
@@ -25,7 +28,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="network.html">Network</a></li>
-                    <li><a href="Jobs.html">Jobs</a></li>
+                    <li><a href="gyms.html">Gyms</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                 </ul>
             </nav>
@@ -35,7 +38,7 @@
     <!-- Hero Section with Pokémon -->
     <section class="hero">
         <div class="container">
-            <h2>About Connectify</h2>
+            <h2>About PokéLink</h2>
             <p>Your Pokémon career and trainer network destination!</p>
         </div>
         <img src="images.png" class="pokemon pikachu" alt="Pikachu">
@@ -49,27 +52,78 @@
 
     <!-- About Content Section -->
     <section class="about-content container">
-        <h2>Our Mission</h2>
-        <p>Connectify is dedicated to bringing together Pokémon trainers, researchers, and enthusiasts from all regions
-            of the Pokémon world. Our platform helps you showcase your skills, find opportunities, and network with
-            other trainers and professionals.</p>
+        <div class="about-header">
+            <h2>Our Trainer Ecosystem</h2>
+            <p>PokéLink is more than a network; it's the digital backbone of the global trainer community, dedicated to
+                mastery, research, and entertainment.</p>
+        </div>
 
-        <h2>What We Offer</h2>
-        <ul>
-            <li>Profile creation to highlight your Pokémon experience.</li>
-            <li>Job listings for Pokémon researchers, trainers, and developers.</li>
-            <li>Networking tools to connect with other trainers and professionals.</li>
-            <li>Insights and updates on Pokémon industry trends and events.</li>
-        </ul>
+        <div class="about-grid">
+            <!-- Pokémon League -->
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                <h3>The Pokémon League</h3>
+                <p>The ultimate goal for any serious trainer. PokéLink provides the tools to track your Gym Badge
+                    progress, receive endorsements for the Elite Four, and find sanctioned regional tournament
+                    qualifiers.</p>
+                <ul class="card-list">
+                    <li><i class="fas fa-check-circle"></i> Badge Certification</li>
+                    <li><i class="fas fa-check-circle"></i> Tournament Scheduling</li>
+                    <li><i class="fas fa-check-circle"></i> Champion Ranking</li>
+                </ul>
+            </div>
 
-        <h2>Join the Community</h2>
-        <p>Whether you are just starting your Pokémon journey or are a seasoned trainer, Connectify welcomes you. Our
-            goal is to help you grow, learn, and discover new opportunities in the world of Pokémon!</p>
+            <!-- Pokémon Contests -->
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <h3>Pokémon Contests</h3>
+                <p>For those who value grace and beauty as much as strength. Showcase your Pokémon's condition and
+                    appeal in Beauty, Cool, Cute, Smart, and Tough categories.</p>
+                <ul class="card-list">
+                    <li><i class="fas fa-check-circle"></i> Appeal Strategy Lab</li>
+                    <li><i class="fas fa-check-circle"></i> Ribbon Tracking</li>
+                    <li><i class="fas fa-check-circle"></i> Coordinator Network</li>
+                </ul>
+            </div>
+
+            <!-- Grand Competitions -->
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-globe"></i></div>
+                <h3>Grand Competitions</h3>
+                <p>From the World Coronation Series to the Battle Frontier, we connect trainers with high-stakes
+                    competitions and specialized battle formats like Triple Battles and Rotation Battles.</p>
+                <ul class="card-list">
+                    <li><i class="fas fa-check-circle"></i> Global Leaderboards</li>
+                    <li><i class="fas fa-check-circle"></i> Format Regulations</li>
+                    <li><i class="fas fa-check-circle"></i> Battle Frontier Access</li>
+                </ul>
+            </div>
+
+            <!-- More Features -->
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-plus-circle"></i></div>
+                <h3>And Many More...</h3>
+                <p>Whether it’s the annual Bug-Catching Contest, the highly physical Pokéathlon, or regional Poké-Ringer
+                    events, PokéLink keeps you notified and registered.</p>
+                <ul class="card-list">
+                    <li><i class="fas fa-check-circle"></i> Multi-Skill Challenges</li>
+                    <li><i class="fas fa-check-circle"></i> Event Registration</li>
+                    <li><i class="fas fa-check-circle"></i> Community Gatherings</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mission-footer">
+            <h2>Join the Journey</h2>
+            <p>Whether you are a professional researcher at the Oak Labs or a rookie starting in Pallet Town, PokéLink
+                is your gateway to greatness in the world of Pokémon!</p>
+            <a href="profile.html" class="cta-btn">Register Your ID</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Connectify. All rights reserved.</p>
+        <p>&copy; 2025 PokéLink. All rights reserved.</p>
     </footer>
 
     <script src="index.js"></script>

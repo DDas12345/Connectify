@@ -16,7 +16,10 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <h1 class="logo">Connectify</h1>
+            <h1 class="logo">
+                <div class="pokeball-logo"></div>
+                PokéLink
+            </h1>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
@@ -25,7 +28,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html" class="active">Profile</a></li>
                     <li><a href="network.html">Network</a></li>
-                    <li><a href="Jobs.html">Jobs</a></li>
+                    <li><a href="gyms.html">Gyms</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
@@ -47,61 +50,106 @@
         <div class="sparkle sparkle5"></div>
     </section>
 
-    <!-- Profile Form Section -->
-    <section class="profile-form container">
-        <h2>Fill Your Profile</h2>
-        <form action="#" method="POST" enctype="multipart/form-data">
+    <!-- Profile Page Content -->
+    <div class="profile-page-grid container">
 
-            <!-- Personal Info -->
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Debanshika Das" required>
+        <!-- Left Column: Trainer Card Preview -->
+        <aside class="trainer-card-preview">
+            <div class="card-inner">
+                <div class="card-header">
+                    <span class="card-id">ID: 0025-2025</span>
+                    <h3>Trainer Card</h3>
+                </div>
+                <div class="card-main">
+                    <div class="avatar-box">
+                        <img src="https://i.pinimg.com/736x/fa/71/70/fa717003033a844eb6aa4970fc2acbcd.jpg"
+                            id="preview-img" alt="Trainer Avatar">
+                    </div>
+                    <div class="info-box">
+                        <h4 id="preview-name">Debanshika Das</h4>
+                        <p id="preview-title" class="title">Ace Trainer | Full-Stack Dev</p>
+                        <div class="pokedex-stats">
+                            <div class="stat"><span class="label">Level</span><span class="val">85</span></div>
+                            <div class="stat"><span class="label">Badges</span><span class="val">8</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="partner-poke">
+                        <img src="images.png" alt="Partner">
+                        <span>Partner: Pikachu</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Column: Edit Form -->
+        <section class="profile-form-section">
+            <div class="form-header">
+                <h2>Trainer Registration</h2>
+                <p>Update your global Trainer credentials below.</p>
             </div>
 
-            <div class="form-group">
-                <label for="title">Professional Title</label>
-                <input type="text" id="title" name="title" placeholder="Front-End Developer | UI/UX Designer" required>
-            </div>
+            <form action="#" method="POST" enctype="multipart/form-data" class="trainer-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" value="Debanshika Das" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainerClass">Trainer Class</label>
+                        <select id="trainerClass" name="trainerClass">
+                            <option>Ace Trainer</option>
+                            <option>Pokémon Professor</option>
+                            <option>Bug Catcher</option>
+                            <option>Gym Leader</option>
+                            <option>Elite Four</option>
+                        </select>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="photo">Profile Photo</label>
-                <input type="file" id="photo" name="photo" accept="image/*">
-            </div>
+                <div class="form-group">
+                    <label for="title">Professional Title</label>
+                    <input type="text" id="title" name="title" value="Front-End Developer | UI/UX Designer" required>
+                </div>
 
-            <!-- About Me -->
-            <div class="form-group">
-                <label for="about">About Me</label>
-                <textarea id="about" name="about" placeholder="Write a brief description about yourself..." rows="4"
-                    required></textarea>
-            </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="favPokemon">Partner Pokémon</label>
+                        <input type="text" id="favPokemon" name="favPokemon" placeholder="e.g. Charizard">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Update ID Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </div>
+                </div>
 
-            <!-- Skills -->
-            <div class="form-group">
-                <label for="skills">Skills (comma-separated)</label>
-                <input type="text" id="skills" name="skills" placeholder="HTML, CSS, JavaScript, React, UI/UX Design">
-            </div>
+                <div class="form-group">
+                    <label for="about">Trainer Biography</label>
+                    <textarea id="about" name="about" rows="3"
+                        placeholder="Tell the world about your journey..."></textarea>
+                </div>
 
-            <!-- Experience -->
-            <div class="form-group">
-                <label for="experience">Experience</label>
-                <textarea id="experience" name="experience" placeholder="Describe your work experience..."
-                    rows="4"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="skills">Advanced Skills</label>
+                    <input type="text" id="skills" name="skills"
+                        placeholder="React, JavaScript, PokéAI, Battle Strategy">
+                </div>
 
-            <!-- Education -->
-            <div class="form-group">
-                <label for="education">Education</label>
-                <input type="text" id="education" name="education"
-                    placeholder="Bachelor of Computer Science, Pokémon University">
-            </div>
+                <div class="form-group">
+                    <label for="experience">Battle Experience (Work History)</label>
+                    <textarea id="experience" name="experience" rows="3"
+                        placeholder="List your previous gym/lab projects..."></textarea>
+                </div>
 
-            <button type="submit" class="submit-btn">Save Profile</button>
-        </form>
-    </section>
+                <button type="submit" class="save-btn">Update Credentials</button>
+            </form>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Connectify. All rights reserved.</p>
+        <p>&copy; 2025 PokéLink. All rights reserved.</p>
     </footer>
 
     <script src="index.js"></script>
