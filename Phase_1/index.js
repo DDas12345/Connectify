@@ -75,115 +75,152 @@ if (menuIcon && navMenu) {
     });
 }
 
-/* 7️⃣ Onboarding Tutorial Logic */
+/* 7️⃣ AI Assistant System Logic */
 const onboardingOverlay = document.getElementById('onboarding-overlay');
 const onboardingText = document.getElementById('onboarding-text');
 const nextBtn = document.getElementById('onboarding-next');
 const skipBtn = document.getElementById('onboarding-skip');
+const helperBtn = document.getElementById('ai-assistant-helper');
+const charPika = document.getElementById('char-pika');
+const charEevee = document.getElementById('char-eevee');
 
 let currentStep = 0;
+let isTyping = false;
 
 const onboardingSteps = [
     {
-        text: "Pika-pika! Welcome to PokéLink, Trainer! I'm Pikachu, and this is Eevee. We'll help you navigate your new professional journey!",
+        speaker: 'pika',
+        text: "Pika-pika! [POKÉ-AI SYSTEM INITIALIZED] Welcome, Trainer! I am System A-1, your primary networking assistant. I've scanned the network and found many opportunities for you!",
         target: null
     },
     {
-        text: "First, use the navigation menu to explore different areas like your Profile and the Battle Gyms!",
+        speaker: 'eevee',
+        text: "And I am System A-2! I'll be handling your adaptability and growth protocols. Together, we'll make sure you become the top-tier Trainer in the professional world!",
+        target: null
+    },
+    {
+        speaker: 'pika',
+        text: "Accessing Navigation Module... Use this uplink to explore different sectors like your Trainer Card and the Battle Gyms. Stay connected!",
         target: "header"
     },
     {
-        text: "This is your Trainer Snapshot. It shows your basic info and how many other Trainers have viewed your profile!",
+        speaker: 'eevee',
+        text: "Scanning Trainer Status... This Snapshot displays your current influence level. Keep track of your views and connections here.",
         target: ".trainer-snapshot"
     },
     {
-        text: "In the main Feed, you can share your catches, battle victories, and research with the community!",
+        speaker: 'pika',
+        text: "Opening Feed Channel... This is where you transmit your achievements and research to other Trainers in the network.",
         target: ".post-creator"
     },
     {
-        text: "Here you can find specialized Groups for developers and mentors, and stay updated with the latest Newsletters.",
+        speaker: 'eevee',
+        text: "Analyzing External Clusters... Check these sectors for specialized Groups and Newsletters to optimize your knowledge base.",
         target: ".left-sidebar .sidebar-box:nth-child(2)"
     },
     {
-        text: "Keep an eye on Market News and Hiring opportunities on the right side to grow your career!",
+        speaker: 'pika',
+        text: "Monitoring Market Trends... The right-side interface highlights career surges and hiring signals. Don't miss out, Trainer!",
         target: ".right-sidebar"
     },
     {
-        text: "You're all set! Go forth and become the very best Trainer in the professional world! Pika!",
+        speaker: 'eevee',
+        text: "All systems go! We'll remain in your system as your AI assistants. You can summon us anytime via the helper icon in the corner!",
         target: null
     }
 ];
 
+function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+        onboardingText.innerHTML = text.substring(0, i + 1) + '<span class="cursor">|</span>';
+        isTyping = true;
+        setTimeout(() => {
+            typeWriter(text, i + 1, fnCallback);
+        }, 30);
+    } else if (typeof fnCallback == 'function') {
+        isTyping = false;
+        setTimeout(fnCallback, 700);
+    }
+}
+
 function updateOnboarding() {
+    if (isTyping) return;
+
     // Remove previous highlights
-    document.querySelectorAll('.tutorial-highlight').forEach(el => {
-        el.classList.remove('tutorial-highlight');
-    });
+    document.querySelectorAll('.tutorial-highlight').forEach(el => el.classList.remove('tutorial-highlight'));
 
     const step = onboardingSteps[currentStep];
-    onboardingText.textContent = step.text;
+
+    // Update active speaker
+    charPika.classList.remove('active-speaker');
+    charEevee.classList.remove('active-speaker');
+    if (step.speaker === 'pika') charPika.classList.add('active-speaker');
+    else charEevee.classList.add('active-speaker');
+
+    // Run Typewriter
+    typeWriter(step.text, 0);
 
     if (step.target) {
         const targetEl = document.querySelector(step.target);
         if (targetEl) {
             targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
             targetEl.classList.add('tutorial-highlight');
-            onboardingOverlay.style.background = 'rgba(0, 0, 0, 0.4)'; // Dimmer when highlighting
         }
-    } else {
-        onboardingOverlay.style.background = 'rgba(0, 0, 0, 0.75)';
     }
 
     if (currentStep === onboardingSteps.length - 1) {
-        nextBtn.innerHTML = 'Finish <i class="fas fa-check"></i>';
+        nextBtn.innerHTML = 'Complete Protocol <i class="fas fa-check"></i>';
     } else {
-        nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+        nextBtn.innerHTML = 'Next Module <i class="fas fa-arrow-right"></i>';
     }
 }
 
 function startOnboarding() {
-    if (!localStorage.getItem('onboardingCompleted')) {
-        onboardingOverlay.classList.add('active');
-        document.body.classList.add('tutorial-active');
-        updateOnboarding();
-    }
+    onboardingOverlay.classList.add('active');
+    document.body.classList.add('tutorial-active');
+    currentStep = 0;
+    updateOnboarding();
 }
 
 nextBtn.addEventListener('click', () => {
+    if (isTyping) return;
     currentStep++;
     if (currentStep < onboardingSteps.length) {
-        // Animate the text change
-        onboardingText.style.opacity = '0';
-        setTimeout(() => {
-            updateOnboarding();
-            onboardingText.style.opacity = '1';
-        }, 300);
+        updateOnboarding();
     } else {
         endOnboarding();
     }
 });
 
 skipBtn.addEventListener('click', endOnboarding);
+helperBtn.addEventListener('click', startOnboarding);
 
 function endOnboarding() {
     onboardingOverlay.classList.remove('active');
     document.body.classList.remove('tutorial-active');
-    document.querySelectorAll('.tutorial-highlight').forEach(el => {
-        el.classList.remove('tutorial-highlight');
-    });
+    document.querySelectorAll('.tutorial-highlight').forEach(el => el.classList.remove('tutorial-highlight'));
     localStorage.setItem('onboardingCompleted', 'true');
 }
 
-// Start tutorial on load
+// Initial session check
 window.addEventListener('load', () => {
-    setTimeout(startOnboarding, 1000); // Small delay for effect
+    if (!localStorage.getItem('onboardingCompleted')) {
+        setTimeout(startOnboarding, 1500);
+    }
 });
 
-// Add CSS for text fade transition
+// Cursor animation CSS
 const style = document.createElement('style');
 style.textContent = `
-    #onboarding-text {
-        transition: opacity 0.3s ease;
+    .cursor {
+        animation: blink 0.7s infinite;
+        color: #00f2ff;
+        font-weight: bold;
+        margin-left: 2px;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 `;
 document.head.appendChild(style);

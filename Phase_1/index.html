@@ -236,20 +236,39 @@
         <p>&copy; 2025 PokéLink. All rights reserved.</p>
     </footer>
 
+    <!-- AI Assistant System Buttons -->
+    <div id="ai-assistant-helper" class="ai-assistant-helper" title="Summon AI Assistants">
+        <div class="helper-pulse"></div>
+        <img src="images.png" alt="Pikachu AI">
+    </div>
+
     <!-- Onboarding Tutorial -->
     <div id="onboarding-overlay" class="onboarding-overlay">
         <div class="onboarding-content">
-            <div class="character-container">
-                <img src="images.png" class="guide-character pikachu-guide" alt="Pikachu Guide">
-                <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png"
-                    class="guide-character eevee-guide" alt="Eevee Guide">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span class="status-text">POKÉ-AI SYSTEM ONLINE</span>
             </div>
-            <div class="speech-bubble">
-                <p id="onboarding-text">Welcome to PokéLink, Trainer! I'm Pikachu, and this is Eevee. We're here to help
-                    you get started!</p>
+
+            <div class="character-container">
+                <div class="character-wrapper pikachu-wrapper" id="char-pika">
+                    <img src="images.png" class="guide-character" alt="Pikachu Guide">
+                    <div class="char-label">SYSTEM A-1 (PIKACHU)</div>
+                </div>
+                <div class="character-wrapper eevee-wrapper" id="char-eevee">
+                    <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png" class="guide-character"
+                        alt="Eevee Guide">
+                    <div class="char-label">SYSTEM A-2 (EEVEE)</div>
+                </div>
+            </div>
+
+            <div class="speech-bubble holographic">
+                <div class="ai-badge">AI ASSISTANCE</div>
+                <p id="onboarding-text">Initializing Trainer Support Protocol...</p>
                 <div class="onboarding-actions">
-                    <button id="onboarding-skip" class="btn-skip">Skip</button>
-                    <button id="onboarding-next" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                    <button id="onboarding-skip" class="btn-skip">Dismiss</button>
+                    <button id="onboarding-next" class="btn-next">Access Next Module <i
+                            class="fas fa-microchip"></i></button>
                 </div>
             </div>
         </div>
