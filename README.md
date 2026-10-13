@@ -39,16 +39,16 @@ The experience is designed to feel like a mix of a modern professional network a
 ```text
 Connectify/
 ├── README.md
-├── frontend/
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── index.html
-│   └── src/
-│       ├── App.jsx
-│       ├── App.css
-│       ├── index.css
-│       └── main.jsx
 ├── Phase_1/
+│   ├── frontend/
+│   │   ├── package.json
+│   │   ├── vite.config.js
+│   │   ├── index.html
+│   │   └── src/
+│   │       ├── App.jsx
+│   │       ├── App.css
+│   │       ├── index.css
+│   │       └── main.jsx
 │   ├── index.html
 │   ├── index.css
 │   ├── index.js
@@ -67,7 +67,7 @@ Connectify/
 From the project root:
 
 ```bash
-cd frontend
+cd Phase_1/frontend
 npm install
 npm run dev -- --host 0.0.0.0
 ```
@@ -80,7 +80,7 @@ http://localhost:5173
 
 ### Optional static preview
 
-The original static prototype remains available under the `Phase_1` folder for reference.
+The original static prototype remains available in the root of `Phase_1` for reference.
 
 ## Main Page
 

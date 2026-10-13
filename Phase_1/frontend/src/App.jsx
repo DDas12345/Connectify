@@ -55,6 +55,14 @@ const rightSidebarItems = {
   hiring: ['💼 PikachuTech hiring Front-End Devs', '💼 Elite Four Labs: Data Analyst', '💼 PokéAI: Machine Learning Assistant'],
 }
 
+const navLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'Profile', href: '#profile' },
+  { label: 'Network', href: '#network' },
+  { label: 'Gyms', href: '#gyms' },
+  { label: 'About', href: '#about' },
+]
+
 const onboardingSteps = [
   {
     speaker: 'pika',
@@ -169,17 +177,15 @@ function App() {
           </div>
           <nav className={menuOpen ? 'nav-menu active' : 'nav-menu'}>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Network</a></li>
-              <li><a href="#">Gyms</a></li>
-              <li><a href="#">About</a></li>
+              {navLinks.map((link) => (
+                <li key={link.label}><a href={link.href}>{link.label}</a></li>
+              ))}
             </ul>
           </nav>
         </div>
       </header>
 
-      <main className="container main-layout">
+      <main className="container main-layout" id="home">
         <section className="hero">
           <div className="container hero-content">
             <h2>Connect, Train, and Grow Your Career</h2>
@@ -208,7 +214,7 @@ function App() {
 
         <div className="page-layout">
           <aside className="left-sidebar">
-            <section className="sidebar-box trainer-snapshot">
+            <section className="sidebar-box trainer-snapshot" id="profile">
               <div className="snapshot-header" />
               <div className="snapshot-content">
                 <img
@@ -224,7 +230,7 @@ function App() {
                 </div>
               </div>
               <div className="snapshot-footer">
-                <a href="#">My Trainer Card <i className="fas fa-arrow-right" /></a>
+                <a href="#profile">My Trainer Card <i className="fas fa-arrow-right" /></a>
               </div>
             </section>
 
@@ -313,7 +319,7 @@ function App() {
             </div>
           </main>
 
-          <aside className="right-sidebar">
+          <aside className="right-sidebar" id="network">
             <section className="sidebar-box">
               <h2>Market News</h2>
               <ul>
@@ -333,6 +339,49 @@ function App() {
             </section>
           </aside>
         </div>
+
+        <section className="info-section" id="gyms">
+          <h2>Battle Gyms & Specializations</h2>
+          <div className="info-grid">
+            <div className="info-card">
+              <span className="section-tag">Gym Leader</span>
+              <h3>Valor Arena</h3>
+              <p>Advanced training for strategic battle minds and high-impact networking.</p>
+            </div>
+            <div className="info-card">
+              <span className="section-tag">Research Lab</span>
+              <h3>PokéTech Center</h3>
+              <p>Career collaboration for developers, analysts, and AI-driven trainers.</p>
+            </div>
+            <div className="info-card">
+              <span className="section-tag">Community</span>
+              <h3>Trainer League</h3>
+              <p>Build relationships with peers, mentors, and industry leaders.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="pokemon-showcase" id="about">
+          <h2>Meet Your Team</h2>
+          <div className="showcase-grid">
+            <div className="showcase-card">
+              <img
+                src="https://images.wikidexcdn.net/mwuploads/wikidex/2/2e/latest/20240727192648/Pikachu.png"
+                alt="Pikachu"
+              />
+              <h3>Pikachu</h3>
+              <p>Fast, energetic, and always ready to spark new connections.</p>
+            </div>
+            <div className="showcase-card">
+              <img
+                src="https://images.wikidexcdn.net/mwuploads/wikidex/4/4a/latest/20250111085022/Eevee.png"
+                alt="Eevee"
+              />
+              <h3>Eevee</h3>
+              <p>Adaptable, curious, and perfect for ambitious growth paths.</p>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer>
