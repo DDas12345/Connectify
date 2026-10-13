@@ -1,35 +1,37 @@
 # Connectify / PokéLink
 
-PokéLink is a fan-inspired networking and career platform for Pokémon trainers, built as a responsive static web app. The project combines a social-media-style interface with a playful Pokémon aesthetic, giving users a fictional professional network for connecting, training, and discovering opportunities.
+PokéLink is a fan-inspired networking and career platform for Pokémon trainers, built as a responsive React front-end. The project blends a professional social-media layout with a playful Pokémon aesthetic, giving users a fictional environment for building connections, training, and exploring career opportunities.
 
 ## Overview
 
-This project presents a polished landing page and supporting sections such as:
+This project includes a polished home dashboard with:
 
-- Home/dashboard feed
-- Profile page
-- Network page
-- Gyms page
-- About page
+- a trainer feed
+- profile snapshot panels
+- market and hiring updates
+- networking sidebars
+- an AI onboarding assistant experience
+- Pokémon-themed styling and branding
 
-The experience is designed to feel like a mix of a modern professional social network and a Pokémon-themed world.
+The experience is designed to feel like a mix of a modern professional network and a Pokémon world.
 
 ## Features
 
-- Responsive layout for desktop and mobile devices
+- React + Vite front-end setup
+- Responsive design for desktop and mobile screens
 - Hero section with branding and visual flair
-- Trainer feed with posts, stats, and activity cards
-- Sidebar sections for groups, newsletters, events, and hiring updates
-- Interactive navigation and hover effects
-- AI-style onboarding assistant experience
-- Pokémon-inspired branding and theme
+- Social-style feed with trainer posts and actions
+- Sidebar modules for groups, newsletters, events, and hiring
+- Interactive AI assistant onboarding overlay
+- Pokémon-inspired theme and user experience
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Font Awesome icons
+- React
+- Vite
+- JavaScript
+- CSS
+- Font Awesome
 - Google Fonts
 
 ## Project Structure
@@ -37,6 +39,15 @@ The experience is designed to feel like a mix of a modern professional social ne
 ```text
 Connectify/
 ├── README.md
+├── frontend/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   └── src/
+│       ├── App.jsx
+│       ├── App.css
+│       ├── index.css
+│       └── main.jsx
 ├── Phase_1/
 │   ├── index.html
 │   ├── index.css
@@ -45,51 +56,45 @@ Connectify/
 │   ├── network.html
 │   ├── gyms.html
 │   ├── about.html
-│   ├── responsive.css
-│   ├── about.css
-│   ├── gyms.css
-│   ├── network.css
-│   ├── profile.css
 │   └── ...image assets
 └── .git/
 ```
 
 ## Getting Started
 
-Because this is a static website, you can run it in either of these ways:
+### Run the React app
 
-### Option 1: Open directly in a browser
-
-Open `Phase_1/index.html` in your browser.
-
-### Option 2: Serve it locally
-
-From the project root, run:
+From the project root:
 
 ```bash
-cd Connectify/Phase_1
-python3 -m http.server 8000
+cd frontend
+npm install
+npm run dev -- --host 0.0.0.0
 ```
 
-Then visit:
+Then open the local Vite URL shown in the terminal, usually:
 
 ```text
-http://localhost:8000
+http://localhost:5173
 ```
+
+### Optional static preview
+
+The original static prototype remains available under the `Phase_1` folder for reference.
 
 ## Main Page
 
 The home page includes:
 
-- a header/navigation bar
-- promotional hero content
-- trainer snapshot and network panels
-- social media feed posts
-- market/news and hiring information
+- a header and navigation bar
+- a promotional hero section
+- trainer snapshot panels
+- a career-focused social feed
+- market/news and hiring modules
 
 ## Notes
 
-This project is a front-end prototype and demo experience, meant to showcase a themed UI rather than a full backend-powered application.
+This project is a front-end prototype and demo experience suitable for portfolio, concept work, and UI experimentation.
 
 ## License
 
