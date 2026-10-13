@@ -37,11 +37,50 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h2>Connect, Train, and Grow Your Career</h2>
-            <p>“Every connection is a step toward mastery—build your professional Pokédex one network at a time.” —
-                PokéLink</p>
-            <a href="profile.html" class="btn">Get Started</a>
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="eyebrow">PokéLink network • 2026</span>
+                <h2>Connect, Train, and Grow Your Career</h2>
+                <p>“Every connection is a step toward mastery—build your professional Pokédex one network at a time.” —
+                    PokéLink</p>
+                <div class="hero-actions">
+                    <a href="profile.html" class="btn">Get Started</a>
+                    <a href="#feed" class="btn btn-secondary">Explore Network</a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <strong>12.4k</strong>
+                        <span>Trainers</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>8.7k</strong>
+                        <span>Mentors</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>94%</strong>
+                        <span>Response rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-spotlight">
+                <div class="spotlight-card">
+                    <div class="spotlight-header">
+                        <span>Training streak</span>
+                        <strong>+18%</strong>
+                    </div>
+                    <div class="ring-chart">
+                        <div class="ring-inner">
+                            <span>86%</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Personal network growth</li>
+                        <li>Top mentor matches this week</li>
+                        <li>Career event invitations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <img src="images.png" class="pokemon pikachu" alt="Pikachu">
         <img src="539-5391523_pokemon-png-image-eevee-pokemon-transparent-png.png" class="pokemon eevee" alt="Eevee">
@@ -77,6 +116,20 @@
             </section>
 
             <section class="sidebar-box">
+                <h2>Daily Goal</h2>
+                <div class="goal-card">
+                    <div class="goal-top">
+                        <span class="mini-label">Streak</span>
+                        <strong>18 days</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <span style="width: 74%"></span>
+                    </div>
+                    <p>Finish 3 quality connections today to keep your streak alive.</p>
+                </div>
+            </section>
+
+            <section class="sidebar-box">
                 <h2>Groups</h2>
                 <ul>
                     <li>⚡ Pokémon AI Developers</li>
@@ -105,14 +158,34 @@
         </aside>
 
         <!-- MAIN CONTENT: TRAINER FEED -->
-        <main class="main-feed">
+        <main class="main-feed" id="feed">
+
+            <div class="feed-toolbar">
+                <div class="search-field">
+                    <i class="fas fa-search"></i>
+                    <input id="feed-search" type="text" placeholder="Search trainer updates..." aria-label="Search trainer updates">
+                </div>
+                <div class="filter-pills" aria-label="Feed filters">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="mentor">Mentor</button>
+                    <button class="filter-pill" data-filter="research">Research</button>
+                    <button class="filter-pill" data-filter="events">Events</button>
+                </div>
+            </div>
 
             <!-- Post Creator Box -->
             <div class="post-creator">
                 <div class="creator-top">
                     <img src="https://i.pinimg.com/736x/fa/71/70/fa717003033a844eb6aa4970fc2acbcd.jpg"
                         class="user-avatar" alt="User">
-                    <button class="create-post-btn">Share your journey, Trainer...</button>
+                    <button class="create-post-btn" aria-label="Create a new post">Share your journey, Trainer...</button>
+                </div>
+                <div class="composer-panel">
+                    <textarea id="composer-input" maxlength="260" placeholder="What is your next trainer milestone?"></textarea>
+                    <div class="composer-footer">
+                        <span id="composer-counter">0 / 260</span>
+                        <button class="publish-btn">Publish update</button>
+                    </div>
                 </div>
                 <div class="creator-bottom">
                     <div class="action"><i class="fas fa-camera"></i> Photo</div>
@@ -123,10 +196,10 @@
             </div>
 
             <!-- Feed Posts -->
-            <div class="feed-posts">
+            <div class="feed-posts" id="feed-posts">
 
                 <!-- Post 1: Blue -->
-                <article class="feed-post">
+                <article class="feed-post" data-topic="mentor">
                     <div class="post-header">
                         <img src="https://pbs.twimg.com/media/EjqV_B0X0AAv_M_.jpg" class="post-avatar" alt="Blue">
                         <div class="post-meta">
@@ -142,14 +215,14 @@
                             class="post-img" alt="Post Image">
                     </div>
                     <div class="post-actions">
-                        <span><i class="far fa-heart"></i> 1.2k Likes</span>
+                        <span class="like-button"><i class="far fa-heart"></i> <span class="like-count">1.2k</span> Likes</span>
                         <span><i class="far fa-comment"></i> 45 Comments</span>
                         <span><i class="fas fa-share-alt"></i> Share</span>
                     </div>
                 </article>
 
                 <!-- Post 2: Professor Oak -->
-                <article class="feed-post">
+                <article class="feed-post" data-topic="research">
                     <div class="post-header">
                         <img src="https://archives.bulbagarden.net/media/upload/thumb/3/30/Samuel_Oak_Masters.png/250px-Samuel_Oak_Masters.png"
                             class="post-avatar" alt="Oak">
@@ -164,14 +237,14 @@
                             populations during the midnight sun. Science is truly marvelous! 🧬✨</p>
                     </div>
                     <div class="post-actions">
-                        <span><i class="far fa-heart"></i> 890 Likes</span>
+                        <span class="like-button"><i class="far fa-heart"></i> <span class="like-count">890</span> Likes</span>
                         <span><i class="far fa-comment"></i> 12 Comments</span>
                         <span><i class="fas fa-share-alt"></i> Share</span>
                     </div>
                 </article>
 
                 <!-- Post 3: Cynthia -->
-                <article class="feed-post">
+                <article class="feed-post" data-topic="events">
                     <div class="post-header">
                         <img src="https://i.pinimg.com/736x/87/40/3e/87403e06385cf355877f9cdce5577661.jpg"
                             class="post-avatar" alt="Cynthia">
@@ -190,7 +263,7 @@
                         </div>
                     </div>
                     <div class="post-actions">
-                        <span><i class="far fa-heart"></i> 5.6k Likes</span>
+                        <span class="like-button"><i class="far fa-heart"></i> <span class="like-count">5.6k</span> Likes</span>
                         <span><i class="far fa-comment"></i> 230 Comments</span>
                         <span><i class="fas fa-share-alt"></i> Share</span>
                     </div>
@@ -235,6 +308,8 @@
     <footer>
         <p>&copy; 2025 PokéLink. All rights reserved.</p>
     </footer>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
     <!-- AI Assistant System Buttons -->
     <div id="ai-assistant-helper" class="ai-assistant-helper" title="Summon AI Assistants">
